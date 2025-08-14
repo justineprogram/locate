@@ -1,7 +1,5 @@
-const SUPABASE_URL = "https://snlqczlbeyjwhndbkmum.supabase.co"; // Replace with your URL
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNubHFjemxiZXlqd2huZGJrbXVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUwOTMwNzYsImV4cCI6MjA3MDY2OTA3Nn0.Qr3zlxmfxxV835f3zPT302pUpX6CcL2wvibWqjzv1eY"; // Replace with your key
-
-const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const SUPABASE_URL = "https://snlqczlbeyjwhndbkmum.supabase.co"
+const supabase = createClient(SUPABASE_URL, process.env.SERVICE_KEY);
 
 const form = document.getElementById("customer-form");
 const customerList = document.getElementById("customer-list");
