@@ -1,5 +1,7 @@
+
 const SUPABASE_URL = "https://snlqczlbeyjwhndbkmum.supabase.co"
-const supabase = createClient(SUPABASE_URL, process.env.SERVICE_KEY);
+const supabase = createClient(SUPABASE_URL, process.env.SUPABASE_KEY);
+
 
 const form = document.getElementById("customer-form");
 const customerList = document.getElementById("customer-list");
