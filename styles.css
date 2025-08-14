@@ -113,3 +113,25 @@ button:hover {
 .delete-btn:hover {
   background-color: #b91c1c;
 }
+
+.location-field {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+#get-location-btn {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+#get-location-btn:hover {
+  background-color: #059669;
+}
+
