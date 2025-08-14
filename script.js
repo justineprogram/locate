@@ -1,6 +1,8 @@
 
+
 const SUPABASE_URL = "https://snlqczlbeyjwhndbkmum.supabase.co"
-const supabase = createClient(SUPABASE_URL, process.env.SUPABASE_KEY);
+    const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNubHFjemxiZXlqd2huZGJrbXVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUwOTMwNzYsImV4cCI6MjA3MDY2OTA3Nn0.Qr3zlxmfxxV835f3zPT302pUpX6CcL2wvibWqjzv1eY"; // Replace this
+    const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 getLocationBtn.addEventListener("click", () => {
     if (!navigator.geolocation) {
