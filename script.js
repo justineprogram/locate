@@ -116,5 +116,5 @@ searchInput.addEventListener("input", (e) => {
 
 // Load data on start
 document.addEventListener("DOMContentLoaded", () => {
-  fetchCustomers();
+  fetchCustomers(); // 👈 this triggers the fetch when page loads
 });
