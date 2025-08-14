@@ -30,6 +30,8 @@ const form = document.getElementById("customer-form");
 const customerList = document.getElementById("customer-list");
 const searchInput = document.getElementById("search");
 
+
+
 // Fetch customers
 async function fetchCustomers(filter = "") {
   const { data, error } = await client
@@ -86,15 +88,21 @@ async function deleteCustomer(id) {
 // Form submission
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
   const name = document.getElementById("name").value.trim();
   const contact = document.getElementById("contact").value.trim();
   const location = document.getElementById("location").value.trim();
 
-  if (!name || !contact || !location) return;
+  if (!name || !contact || !location) {
+    alert("Please fill out all fields.");
+    return;
+  }
 
   const { error } = await client.from("customers").insert([{ name, contact, location }]);
+
   if (error) {
-    alert("Error saving customer");
+    alert("Error saving customer: " + error.message);
+    console.error(error);
   } else {
     form.reset();
     fetchCustomers();
