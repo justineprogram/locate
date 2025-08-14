@@ -160,9 +160,9 @@ getLocationBtn.addEventListener("click", () => {
     });
 
     // 🚀 Load customers on page load
-    document.addEventListener("DOMContentLoaded", () => {
-      fetchCustomers();
-    });
+   document.addEventListener("DOMContentLoaded", () => {
+  fetchCustomers(); // 👈 this triggers the fetch when page loads
+});
   </script>
 </body>
 </html>
