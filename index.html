@@ -62,6 +62,22 @@ getLocationBtn.addEventListener("click", () => {
   );
 });
 
+getLocationBtn.addEventListener("click", () => {
+  console.log("📍 Button clicked!");
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      console.log("🌍 Location found:", position.coords);
+      // rest of code
+    },
+    (error) => {
+      console.error("❌ Error getting location:", error);
+    }
+  );
+});
+
+
+    
     // 🧾 DOM Elements
     const form = document.getElementById("customer-form");
     const customerList = document.getElementById("customer-list");
