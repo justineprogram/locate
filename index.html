@@ -26,8 +26,10 @@
   <script>
     // 🔗 1. Connect to Supabase
 
-      const SUPABASE_URL = "https://snlqczlbeyjwhndbkmum.supabase.co"
-      const supabase = createClient(SUPABASE_URL, process.env.SERVICE_KEY);
+      
+const SUPABASE_URL = "https://snlqczlbeyjwhndbkmum.supabase.co"
+const supabase = createClient(SUPABASE_URL, process.env.SUPABASE_KEY);
+
 
     // 🧾 DOM Elements
     const form = document.getElementById("customer-form");
