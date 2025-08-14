@@ -2,6 +2,27 @@
 const SUPABASE_URL = "https://snlqczlbeyjwhndbkmum.supabase.co"
 const supabase = createClient(SUPABASE_URL, process.env.SUPABASE_KEY);
 
+getLocationBtn.addEventListener("click", () => {
+    if (!navigator.geolocation) {
+      alert("Geolocation is not supported by your browser.");
+      return;
+    }
+
+    locationInput.value = "Getting location...";
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const lat = position.coords.latitude.toFixed(6);
+        const lon = position.coords.longitude.toFixed(6);
+        locationInput.value = `${lat}, ${lon}`;
+      },
+      (error) => {
+        console.error(error);
+        locationInput.value = "";
+        alert("Unable to retrieve your location.");
+      }
+    );
+  });
 
 const form = document.getElementById("customer-form");
 const customerList = document.getElementById("customer-list");
