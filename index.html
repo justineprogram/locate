@@ -14,7 +14,10 @@
     <form id="customer-form">
       <input type="text" id="name" placeholder="Customer Name" required />
       <input type="text" id="contact" placeholder="Customer Contact" required />
-      <input type="text" id="location" placeholder="Customer Location" required />
+      <div class="location-field">
+        <button type="button" id="get-location-btn">📍 Use My Location</button>
+        <input type="text" id="location" placeholder="Waiting for location..." readonly required />
+      </div>
       <button type="submit">Save Customer</button>
     </form>
 
